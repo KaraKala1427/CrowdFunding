@@ -14,8 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.main');
 });
+
+//Route::get('/main', function () {
+//    return view('pages.main');
+//});
 
 require __DIR__.'/auth.php';
 
