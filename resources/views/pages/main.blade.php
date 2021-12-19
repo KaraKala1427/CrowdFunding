@@ -1,5 +1,9 @@
 @extends('layouts.general')
 
+@section('title')
+CrowdFunding.kz
+@endsection
+
 @section('content')
     @include('pages.main.home')
     @include('pages.main.categories')

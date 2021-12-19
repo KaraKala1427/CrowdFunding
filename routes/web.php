@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PublicationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,7 +23,8 @@ Route::get('/', function () {
 //    return view('pages.main');
 //});
 
-Route::get('/profile', view('pages.profile.profile'));
+Route::get('/profile', [ProfileController::class, 'index'])->middleware('auth');
+Route::get('/profile/publish', [PublicationController::class, 'index'])->middleware('auth')->name('profile.publish');
 
 require __DIR__.'/auth.php';
 
