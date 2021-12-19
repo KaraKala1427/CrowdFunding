@@ -21,6 +21,8 @@ Route::get('/', function () {
 //    return view('pages.main');
 //});
 
+Route::get('/profile', view('pages.profile.profile'));
+
 require __DIR__.'/auth.php';
 
 

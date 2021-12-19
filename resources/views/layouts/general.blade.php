@@ -16,5 +16,6 @@
     @include('inc.footer')
 
     <script src="{{ mix('js/app.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
 </body>
 </html>

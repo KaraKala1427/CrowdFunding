@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer" id="contacts">
     <div class="container">
         <div class="row">
             <!-- CONTENT FOR THE MOBILE NUMBER  -->
@@ -12,8 +12,8 @@
                     </svg>
                 </div>
                 <div class="contact-box__info">
-                    <a href="#" class="contact-box__info--title">+1 728365413</a>
-                    <p class="contact-box__info--subtitle">  Mon-Fri 9am-6pm</p>
+                    <a href="#" class="contact-box__info--title">+7 747 769 8086</a>
+                    <p class="contact-box__info--subtitle">  Пн-Пт 9:00-18:00</p>
                 </div>
             </div>
             <!-- CONTENT FOR EMAIL  -->
@@ -28,8 +28,8 @@
                     </svg>
                 </div>
                 <div class="contact-box__info">
-                    <a href="#" class="contact-box__info--title">info@company.com</a>
-                    <p class="contact-box__info--subtitle">Online support</p>
+                    <a href="#" class="contact-box__info--title">info@crowdfunding.kz</a>
+                    <p class="contact-box__info--subtitle">Онлайн поддержка</p>
                 </div>
             </div>
             <!-- CONTENT FOR LOCATION  -->
@@ -45,85 +45,59 @@
                     </svg>
                 </div>
                 <div class="contact-box__info">
-                    <a href="#" class="contact-box__info--title">New York, USA</a>
-                    <p class="contact-box__info--subtitle">NY 10012, US</p>
+                    <a href="#" class="contact-box__info--title">Алматы, Казахстан</a>
+                    <p class="contact-box__info--subtitle">Толе би, 59</p>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- START THE SOCIAL MEDIA CONTENT  -->
-    <div class="footer-sm" style="background-color: #212121;">
-        <div class="container">
-            <div class="row py-4 text-center text-white">
-                <div class="col-lg-5 col-md-6 mb-4 mb-md-0">
-                    connect with us on social media
-                </div>
-                <div class="col-lg-7 col-md-6">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
+{{--    <div class="footer-sm" style="background-color: #212121;">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row py-4 text-center text-white">--}}
+{{--                <div class="col-lg-5 col-md-6 mb-4 mb-md-0">--}}
+{{--                    connect with us on social media--}}
+{{--                </div>--}}
+{{--                <div class="col-lg-7 col-md-6">--}}
+{{--                    <a href="#"><i class="fab fa-facebook"></i></a>--}}
+{{--                    <a href="#"><i class="fab fa-twitter"></i></a>--}}
+{{--                    <a href="#"><i class="fab fa-github"></i></a>--}}
+{{--                    <a href="#"><i class="fab fa-linkedin"></i></a>--}}
+{{--                    <a href="#"><i class="fab fa-instagram"></i></a>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
 
     <!-- START THE CONTENT FOR THE CAMPANY INFO -->
     <div class="container mt-5">
         <div class="row text-white justify-content-center mt-3 pb-3">
             <div class="col-12 col-sm-6 col-lg-6 mx-auto">
-                <h5 class="text-capitalize fw-bold">Campany name</h5>
+                <h5 class="text-capitalize fw-bold">CrowdFunding.kz</h5>
                 <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
-                <p class="lh-lg">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem ex obcaecati blanditiis reprehenderit ab mollitia voluptatem consectetur?
-                </p>
+{{--                <p class="lh-lg">--}}
+{{--                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem ex obcaecati blanditiis reprehenderit ab mollitia voluptatem consectetur?--}}
+{{--                </p>--}}
             </div>
-            <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
-                <h5 class="text-capitalize fw-bold">Products</h5>
-                <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
-                <ul class="list-inline campany-list">
-                    <li><a href="#">Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum</a></li>
-                </ul>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
-                <h5 class="text-capitalize fw-bold">useful links</h5>
-                <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
-                <ul class="list-inline campany-list">
-                    <li><a href="#"> Your Account</a></li>
-                    <li><a href="#">Become an Affiliate</a></li>
-                    <li><a href="#">create an account</a></li>
-                    <li><a href="#">Help</a></li>
-                </ul>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
-                <h5 class="text-capitalize fw-bold">contact</h5>
-                <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
-                <ul class="list-inline campany-list">
-                    <li><a href="#">Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum</a></li>
-                    <li><a href="#">Lorem ipsum</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
 
-    <!-- START THE COPYRIGHT INFO  -->
-    <div class="footer-bottom pt-5 pb-5">
-        <div class="container">
-            <div class="row text-center text-white">
-                <div class="col-12">
-                    <div class="footer-bottom__copyright">
-                        &COPY; Copyright 2021 <a href="#">Company</a> | Created by <a href="http://codewithpatrick.com" target="_blank">Muriungi</a><br><br>
-
-                        Distributed by <a href="http://themewagon.com" target="_blank">ThemeWagon</a>
-                    </div>
-                </div>
+            <div class="col-12 col-sm-6 col-lg-3 mb-4 mx-auto">
+                <h5 class="text-capitalize fw-bold">Полезные ссылки</h5>
+                <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+                <ul class="list-inline campany-list">
+                    <li><a href="#">Аккаунт</a></li>
+                    <li><a href="#">Открыть Фонд</a></li>
+                    <li><a href="#">Категории</a></li>
+                    <li><a href="#">Помощь</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 mb-4 mx-auto">
+                <h5 class="text-capitalize fw-bold">Контакты</h5>
+                <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+                <ul class="list-inline campany-list">
+                    <li><a href="#">WhatsApp</a></li>
+                    <li><a href="#">Электронная почта</a></li>
+                </ul>
             </div>
         </div>
     </div>
