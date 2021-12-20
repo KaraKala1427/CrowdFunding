@@ -31,12 +31,12 @@ class ImageService extends BaseService
     /**
      * Сохранить картинку
      */
-    public function store(UploadedFile $file) : ServiceResult
+    public function store(UploadedFile $file)
     {
         $path = $file->storePublicly('images','public');
         $data = ['path' => $path];
         $model =  $this->repository->store($data);
-        return $this->result($model);
+        return $model;
     }
 
 

@@ -19,7 +19,7 @@ class CreatePublicationsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('restrict');
             $table->string('title');
             $table->text('description');
-            $table->foreignId('account_id')->index();
+            $table->foreignId('account_id')->index()->nullable();
             $table->foreign('account_id')->references('id')->on('accounts')->onDelete('restrict');
             $table->foreignId('category_id')->index();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('restrict');

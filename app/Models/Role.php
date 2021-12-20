@@ -5,8 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Image extends Model
+class Role extends Model
 {
     use HasFactory;
-    protected $fillable = ['path'];
+
+    const ADMIN = 1;
+    const MODERATOR = 2;
+    const CLIENT = 3;
+    protected $fillable = ['name'];
 }

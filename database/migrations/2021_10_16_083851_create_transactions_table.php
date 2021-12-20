@@ -17,8 +17,8 @@ class CreateTransactionsTable extends Migration
             $table->id();
             $table->foreignId('user_id')->index();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('restrict');
-            $table->foreignId('account_id')->index();
-            $table->foreign('account_id')->references('id')->on('accounts')->onDelete('restrict');
+            $table->foreignId('publication_id')->index();
+            $table->foreign('publication_id')->references('id')->on('publications')->onDelete('restrict');
             $table->integer('sum');
             $table->timestamps();
         });

@@ -19,7 +19,9 @@
         <div class="collapse navbar-collapse justify-content-end">
             @auth
             <div>
-                <img src="{{ asset('mini-parts/profile.svg') }}" alt="" style="width: 60px">
+                <a href="{{route('profile.index')}}">
+                    <img src="{{ asset('mini-parts/profile.svg') }}" alt="" style="width: 60px">
+                </a>
             </div>
             @else
             <div>

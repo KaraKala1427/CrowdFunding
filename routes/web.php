@@ -23,8 +23,12 @@ Route::get('/', function () {
 //    return view('pages.main');
 //});
 
-Route::get('/profile', [ProfileController::class, 'index'])->middleware('auth');
-Route::get('/profile/publish', [PublicationController::class, 'index'])->middleware('auth')->name('profile.publish');
+Route::group(["middleware" => "auth", "prefix" => "/profile", "as" => "profile."], function (){
+    Route::get('', [ProfileController::class, 'index'])->name('index');
+    Route::get('/edit', [ProfileController::class, 'getEdit'])->name('edit');
+    Route::post('/update', [ProfileController::class, 'update'])->name('update-post');
+    Route::get('/publish', [PublicationController::class, 'index'])->name('publish');
+});
 
 require __DIR__.'/auth.php';
 

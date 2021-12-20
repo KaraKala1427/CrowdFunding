@@ -15,8 +15,10 @@ class CreateImagesTable extends Migration
     {
         Schema::create('images', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('publication_id')->index();
-            $table->foreign('publication_id')->references('id')->on('publications')->onDelete('restrict');
+//            $table->foreignId('publication_id')->index()->nullable();
+//            $table->foreign('publication_id')->references('id')->on('publications')->onDelete('restrict');
+//            $table->foreignId('user_id')->index()->nullable();
+//            $table->foreign('user_id')->references('id')->on('users')->onDelete('restrict');
             $table->string('path');
             $table->timestamps();
         });
