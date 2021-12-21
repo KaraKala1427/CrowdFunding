@@ -22,6 +22,12 @@
                 <a href="{{route('profile.index')}}">
                     <img src="{{ asset('mini-parts/profile.svg') }}" alt="" style="width: 60px">
                 </a>
+                <a href="{{ route('logout') }}" class="btn btn-primary rounded-4" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Выйти</a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                      style="display: none;">
+                    @csrf
+                </form>
             </div>
             @else
             <div>

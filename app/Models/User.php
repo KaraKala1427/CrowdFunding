@@ -24,7 +24,6 @@ class User extends Authenticatable
         'position',
         'phone_number',
         'address',
-
     ];
 
     /**

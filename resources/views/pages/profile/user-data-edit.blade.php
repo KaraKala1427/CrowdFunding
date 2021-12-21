@@ -1,6 +1,5 @@
 <section id="home" class="intro-section">
     <div class="container">
-        <div class="main-body">
 
             <form action="{{route('profile.update-post')}}" method="post" class="row gutters-sm" enctype="multipart/form-data">
                 @csrf
@@ -75,9 +74,6 @@
                     </div>
                 </div>
             </form>
-
-        </div>
     </div>
-
 
 </section>

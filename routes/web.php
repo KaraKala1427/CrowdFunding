@@ -28,6 +28,7 @@ Route::group(["middleware" => "auth", "prefix" => "/profile", "as" => "profile."
     Route::get('/edit', [ProfileController::class, 'getEdit'])->name('edit');
     Route::post('/update', [ProfileController::class, 'update'])->name('update-post');
     Route::get('/publish', [PublicationController::class, 'index'])->name('publish');
+    Route::post('/publish', [PublicationController::class, 'store'])->name('publish-create');
 });
 
 require __DIR__.'/auth.php';

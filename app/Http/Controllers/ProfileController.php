@@ -19,7 +19,7 @@ class ProfileController extends Controller
     {
         $profile = auth()->user();
         $imageModel = $this->imageService->get($profile->image_id);
-        $imagePath = $imageModel->data->path;
+        $imagePath = $imageModel->data->path ?? '';
         return view('pages.profile.profile', compact('profile','imagePath'));
     }
 
@@ -27,7 +27,7 @@ class ProfileController extends Controller
     {
         $profile = auth()->user();
         $imageModel = $this->imageService->get($profile->image_id);
-        $imagePath = $imageModel->data->path;
+        $imagePath = $imageModel->data->path ?? '';
         return view('pages.profile.edit-profile',['data' => $profile, 'imagePath' => $imagePath]);
     }
 
@@ -47,6 +47,5 @@ class ProfileController extends Controller
         $profile->save();
 
         return redirect()->route('profile.index')->with('success','Профиль успешно обновлено');
-        $profile->phone_number = $request['phone_number'] ?? null;
     }
 }

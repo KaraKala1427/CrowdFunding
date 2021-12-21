@@ -7,7 +7,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="d-flex flex-column align-items-center text-center">
-                                <img src="{{asset("storage/".$imagePath)}}" alt="Admin"
+                                <img @if($imagePath != '')src="{{asset("storage/".$imagePath)}}"@endif alt="profile image"
                                      class="rounded-circle" width="150">
                                 <div class="mt-3">
 {{--                                    <button class="btn btn-primary">Загрузить фото</button>--}}
@@ -66,7 +66,7 @@
                             <hr>
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <a class="btn btn-primary" target="__blank"
+                                    <a class="btn btn-primary"
                                        href="{{ route('profile.edit') }}">Редактировать</a>
                                 </div>
                             </div>
@@ -76,7 +76,7 @@
                 </div>
             </div>
             <div class="row justify-content-center mt-3">
-                <a class="btn btn-outline-light col-4 p-2" target="__blank"
+                <a class="btn btn-outline-light col-4 p-2"
                    href="{{route('profile.publish')}}">Создать публикацию</a>
             </div>
         </div>
