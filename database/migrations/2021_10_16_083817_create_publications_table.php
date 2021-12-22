@@ -17,12 +17,11 @@ class CreatePublicationsTable extends Migration
             $table->id();
             $table->foreignId('user_id')->index();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('restrict');
-            $table->string('title');
-            $table->text('description');
+            $table->string('title')->index();
+            $table->text('description')->nullable();
             $table->foreignId('account_id')->index()->nullable();
             $table->foreign('account_id')->references('id')->on('accounts')->onDelete('restrict');
-            $table->foreignId('category_id')->index();
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('restrict');
+            $table->string('category')->nullable();
             $table->integer('amount_needed')->nullable();
             $table->date('start_date')->nullable();
             $table->date('end_date')->nullable();

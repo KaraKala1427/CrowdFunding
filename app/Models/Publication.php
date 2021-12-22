@@ -13,4 +13,8 @@ class Publication extends Model
         'category',
         'description'
     ];
+
+    public function images() {
+        return $this->hasMany(Image::class, 'id', 'image_id');
+    }
 }

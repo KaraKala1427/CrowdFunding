@@ -1,5 +1,5 @@
 <section id="home" class="intro-section">
-    <div class="container">
+    <div class="container ">
         <div class="main-body">
 
             <div class="row gutters-sm">
@@ -77,7 +77,7 @@
             </div>
             <div class="row justify-content-center mt-3">
                 <a class="btn btn-outline-light col-4 p-2"
-                   href="{{route('profile.publish')}}">Создать публикацию</a>
+                   href="{{route('profile.publish')}}">Создать фонд</a>
             </div>
         </div>
     </div>

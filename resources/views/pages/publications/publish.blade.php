@@ -8,7 +8,7 @@
     <section class="publish-section">
         <div class="container">
             <div class="row text-center text-white">
-                <h1 class="display-3 fw-bold">Добавление публикации</h1>
+                <h1 class="display-3 fw-bold">Создание фонда</h1>
                 {{--            <hr style="width: 100px; height: 3px; " class="mx-auto">--}}
             </div>
             <div class="publish_form" style="width: 500px; margin: auto">
@@ -18,18 +18,18 @@
                         <label for="category" class="text-white">Категория</label>
                         <select id="category" name="category" class="form-control">
                             <option value="">---</option>
-                            <option value="">eCommerce</option>
-                            <option value="">Образовательные стартап</option>
-                            <option value="">FinTech</option>
-                            <option value="">Игры</option>
-                            <option value="">Аппаратное и программное обеспечение</option>
-                            <option value="">Социальные сети</option>
+                            <option value="eCommerce">eCommerce</option>
+                            <option value="Образовательный стартап">Образовательный стартап</option>
+                            <option value="FinTech">FinTech</option>
+                            <option value="Игры">Игры</option>
+                            <option value="Аппаратное и программное обеспечение">Аппаратное и программное обеспечение</option>
+                            <option value="Социальные сети">Социальные сети</option>
                         </select>
                     </div>
 
                     <div class="form-group mt-3">
-                        <label for="name" class="text-white">Название стартапа</label>
-                        <input type="text" id="name" name="name" class="form-control" placeholder="Введите название">
+                        <label for="title" class="text-white">Название стартапа</label>
+                        <input type="text" id="title" name="title" class="form-control" placeholder="Введите название">
                     </div>
                     <div class="form-group mt-3">
                         <label for="description" class="text-white">Описание</label>
@@ -37,8 +37,20 @@
                                   placeholder="Описание"></textarea>
                     </div>
                     <div class="form-group mt-3">
+                        <label for="amount_needed" class="text-white">Сколько требуется накопить ?</label>
+                        <input type="number" id="amount_needed" name="amount_needed" class="form-control" placeholder="Введите сумму (в тенге)">
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="start_date" class="text-white">Дата начало</label>
+                        <input type="date" id="start_date" name="start_date" class="form-control" placeholder="Введите дата начало">
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="end_date" class="text-white">Дата окончание</label>
+                        <input type="date" id="end_date" name="end_date" class="form-control" placeholder="Введите дата окончание">
+                    </div>
+                    <div class="form-group mt-3">
                         <label for="img" class="text-white">Рисунок</label>
-                        <input type="file" class="form-control" id="img" name="img" accept="image/*" multiple><br><br>
+                        <input type="file" class="form-control" id="img" name="img" accept="image/*" ><br><br>
                         @error('img')
                         <small id="emailHelp" class="form-text text-danger">Загрузите рисунок</small>
                         @enderror

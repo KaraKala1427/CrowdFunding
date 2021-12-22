@@ -18,9 +18,10 @@ class ProfileController extends Controller
     public function index()
     {
         $profile = auth()->user();
+        $publications = $profile->publications;
         $imageModel = $this->imageService->get($profile->image_id);
         $imagePath = $imageModel->data->path ?? '';
-        return view('pages.profile.profile', compact('profile','imagePath'));
+        return view('pages.profile.profile', compact('profile','imagePath','publications'));
     }
 
     public function getEdit()

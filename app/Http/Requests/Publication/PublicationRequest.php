@@ -25,9 +25,12 @@ class PublicationRequest extends FormRequest
     {
         return [
             'category' => 'nullable|string',
-            'full_name' => 'required|max:200',
+            'title' => 'required|max:200',
             'img' => 'nullable|file|image|mimes:jpeg,png,jpg,gif,jfif,svg',
             'description' => 'required|string|max:10000',
+            'amount_needed' => 'nullable|integer',
+            'start_date' => 'nullable|date',
+            'end_date' => 'nullable|date',
         ];
     }
 }
