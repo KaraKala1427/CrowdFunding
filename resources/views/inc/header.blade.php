@@ -3,11 +3,11 @@
 
         <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="#categories">Категории</a></li>
-                <li class="nav-item"><a class="nav-link" href="#faq">ЧаВо</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">О нас</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contacts">Контакты</a>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="/#categories">Категории</a></li>
+                <li class="nav-item"><a class="nav-link" href="/#faq">ЧаВо</a></li>
+                <li class="nav-item"><a class="nav-link" href="/#about">О нас</a></li>
+                <li class="nav-item"><a class="nav-link" href="/#contacts">Контакты</a>
                 </li>
             </ul>
             <input type="text" class="rounded-pill btn-rounded"/>

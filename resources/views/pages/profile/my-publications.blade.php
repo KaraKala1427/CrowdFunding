@@ -23,7 +23,8 @@
                         <p class="card-text">Сколько требуется : <b>{{$publication->amount_needed}} тг</b></p>
                         <p class="card-text">Дата начало: <b>{{$publication->start_date}}</b></p>
                         <p class="card-text">Дата окончание: <b>{{$publication->end_date}}</b></p>
-                        <a href="#" class="btn btn-primary">Детально</a>
+{{--                        <p><small>Осталось : {{$publication->leftDays}} дней</small></p>--}}
+                        <a href="{{route('profile.get-publication',$publication->id)}}" class="btn btn-primary">Детально</a>
                     </div>
                 </div>
             </div>

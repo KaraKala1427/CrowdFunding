@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Publication\PostRequest;
+use App\Models\Category;
 use App\Models\User;
 use App\Services\ImageService;
 use Illuminate\Http\Request;

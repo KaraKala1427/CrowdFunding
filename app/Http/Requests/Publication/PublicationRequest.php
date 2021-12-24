@@ -24,7 +24,7 @@ class PublicationRequest extends FormRequest
     public function rules()
     {
         return [
-            'category' => 'nullable|string',
+            'category_id' => 'nullable|integer',
             'title' => 'required|max:200',
             'img' => 'nullable|file|image|mimes:jpeg,png,jpg,gif,jfif,svg',
             'description' => 'required|string|max:10000',
