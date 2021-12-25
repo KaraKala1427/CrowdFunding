@@ -18,7 +18,7 @@
         <p>{{  $publication->description}}</p>
         <p><strong>{{ $publication->amount_needed}} тг</strong></p>
         <p><small>Осталось : {{$leftDays}} дней</small></p>
-        @if($profile->id == $publication->user_id)
+        @if($profile->id == $publication->user_id || $profile->role_id == 1)
             <a href="{{ route('profile.get-publication-edit', $publication->id) }}"><button class="btn btn-primary">Edit</button></a>
             <a href="{{ route('profile.delete-publication', $publication->id) }}"><button class="btn btn-danger">Delete</button></a>
         @else

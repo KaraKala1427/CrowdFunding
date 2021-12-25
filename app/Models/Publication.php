@@ -14,6 +14,10 @@ class Publication extends Model
         'category',
         'description'
     ];
+    protected $hidden = [
+        'created_at',
+        'updated_at'
+    ];
 
     public function images() {
         return $this->hasMany(Image::class, 'id', 'image_id');

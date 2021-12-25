@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\Publication\PublicationRequest;
 use App\Models\Category;
 use App\Models\Publication;
+use App\Models\User;
 use App\Services\ImageService;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -28,7 +29,6 @@ class PublicationController extends Controller
     public function store(PublicationRequest $request)
     {
         $data = $request->validated();
-//        dd($data);
         $publication = new Publication();
         $publication->user_id = auth()->user()->id;
         $publication->category_id = (int)$data['category_id'] ?? '';
@@ -42,6 +42,9 @@ class PublicationController extends Controller
             $publication->image_id = $image->id;
         }
         $publication->save();
+
+        \Log::info("Publication created : {$publication}");
+
         return redirect()->route('profile.index')->with('success','Фонд успешно создан');
     }
 
@@ -78,6 +81,7 @@ class PublicationController extends Controller
             $publication->image_id = $image->id;
         }
         $publication->save();
+        \Log::info("Publication updated : {$publication}");
         return redirect()->route('profile.index')->with('success','Фонд успешно создан');
     }
 
@@ -85,6 +89,7 @@ class PublicationController extends Controller
     public function delete($id)
     {
         Publication::find($id)->delete();
+        \Log::info("Publication deleted by id : {$id}");
         return redirect()->route('profile.index')->with('success','Объявление было удалено');
     }
 
@@ -94,5 +99,30 @@ class PublicationController extends Controller
         $publications = $category->publications;
         $categoryName = $category->name;
         return view('pages.publications.category-publications',compact('publications','categoryName'));
+    }
+
+
+
+    // API
+
+    public function indexAPI()
+    {
+        $publications = Publication::all();
+        return response()->json($publications);
+    }
+    public function getPublicationAPI($id)
+    {
+        $profile = User::find(6); // auth()->user()
+        $publication = Publication::find($id);
+        return response()->json($publication);
+    }
+
+    public function deleteAPI($id)
+    {
+        Publication::find($id)->delete();
+        \Log::info("Publication deleted by id : {$id}");
+        return response()->json([
+            'message' => 'Успешно удалено'
+        ]);
     }
 }

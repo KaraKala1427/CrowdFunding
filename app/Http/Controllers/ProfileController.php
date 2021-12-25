@@ -47,7 +47,44 @@ class ProfileController extends Controller
             $profile->image_id = $image->id;
         }
         $profile->save();
+        \Log::info("User created : {$profile}");
 
         return redirect()->route('profile.index')->with('success','Профиль успешно обновлено');
+    }
+
+
+//    API
+    public function indexAPI($id)
+    {
+        $profile = User::find($id);
+        $imageModel = $this->imageService->get($profile->image_id);
+        $imagePath = $imageModel->data->path ?? '';
+        $result = [
+            'profile' => $profile
+        ];
+        return response()->json($result);
+    }
+
+
+    public function updateAPI(PostRequest $request, $id)
+    {
+        $request = $request->validated();
+        $profile = User::find($id);
+        $profile->full_name = $request['full_name'];
+        $profile->email = $request['email'];
+        $profile->position = $request['position'] ?? null;
+        $profile->phone_number = $request['phone_number'];
+        $profile->address = $request['address'] ?? null;
+        if(isset($request['img'])){
+            $image = $this->imageService->store($request['img']);
+            $profile->image_id = $image->id;
+        }
+        $profile->save();
+        \Log::info("User created : {$profile}");
+
+        return response()->json([
+            'profile_id' => $profile->id,
+            'message' => 'Успешно обновлено'
+        ]);
     }
 }

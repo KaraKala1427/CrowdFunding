@@ -16,6 +16,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/migrate', [\App\Http\Controllers\MigrateController::class, 'index']);
+Route::get('/role-seeder', [\App\Http\Controllers\MigrateController::class, 'role_seeder']);
+Route::get('/user-seeder', [\App\Http\Controllers\MigrateController::class, 'user_seeder']);
+Route::get('/category-seeder', [\App\Http\Controllers\MigrateController::class, 'category_seeder']);
+
 
 Route::get('/', [HomeController::class,'index'])->name('home');
 Route::get('/category/{id}/publications', [PublicationController::class,'publicationsByCategory'])->name('category-publications');
